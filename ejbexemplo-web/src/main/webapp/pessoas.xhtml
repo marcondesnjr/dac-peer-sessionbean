@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:panelGrid columns="2" cellspacing="10">
+
+            <h:outputText value="CPF"/>
+            <h:outputText value="NOME"/>
+
+            <c:forEach items="#{pessoaManagedBean.listar()}" var="item">
+                <h:outputText value="#{item.key}"/>
+                <h:outputText value="#{item.value}"/>
+            </c:forEach>
+        </h:panelGrid>
+    </h:body>
+</html>
+
